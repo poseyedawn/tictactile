@@ -84,11 +84,52 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': { transform: 'scale(0.8)', opacity: '0' },
+					'70%': { transform: 'scale(1.1)' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'pulse': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' }
+				},
+				'fade-in': {
+					from: { opacity: '0' },
+					to: { opacity: '1' }
+				},
+				'draw-line': {
+					from: { 'stroke-dashoffset': '1000' },
+					to: { 'stroke-dashoffset': '0' }
+				},
+				'scale-in': {
+					from: { transform: 'scale(0.9)', opacity: '0' },
+					to: { transform: 'scale(1)', opacity: '1' }
+				},
+				'scale-out': {
+					from: { transform: 'scale(1)', opacity: '1' },
+					to: { transform: 'scale(0.9)', opacity: '0' }
+				},
+				'spin': {
+					from: { transform: 'rotate(0deg)' },
+					to: { transform: 'rotate(360deg)' }
+				},
+				'confetti': {
+					'0%': { transform: 'translateY(0) rotate(0deg)', opacity: '1' },
+					'100%': { transform: 'translateY(100vh) rotate(720deg)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 0.3s ease-out',
+				'pulse': 'pulse 1.5s ease-in-out infinite',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'draw-line': 'draw-line 1s ease-in-out forwards',
+				'scale-in': 'scale-in 0.2s ease-out',
+				'scale-out': 'scale-out 0.2s ease-out',
+				'spin': 'spin 1s linear infinite',
+				'confetti': 'confetti 2s ease-out forwards'
 			}
 		}
 	},
