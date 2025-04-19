@@ -108,7 +108,7 @@ export const getAIMove = (board: Board, difficulty: string): number => {
     return emptyCells[Math.floor(Math.random() * emptyCells.length)];
   }
   
-  // Set depth based on difficulty
+  // Set depth based on difficulty - increased depth for harder gameplay
   let depth;
   switch (difficulty) {
     case 'easy':
@@ -119,11 +119,15 @@ export const getAIMove = (board: Board, difficulty: string): number => {
       }
       break;
     case 'medium':
-      depth = 4;
+      depth = 6; // Increased from 4 to 6
+      // 10% chance to make a suboptimal move on medium
+      if (Math.random() < 0.1) {
+        return emptyCells[Math.floor(Math.random() * emptyCells.length)];
+      }
       break;
     case 'hard':
     default:
-      depth = 6;
+      depth = 9; // Increased from 6 to 9 for maximum difficulty
       break;
   }
   
