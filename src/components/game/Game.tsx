@@ -18,6 +18,14 @@ const Game: React.FC = () => {
 
   const { handlePlayerMove } = useGameMoves(gameState, setGameState, setShowConfetti);
 
+  // Apply theme to document body
+  useEffect(() => {
+    // Remove all theme classes first
+    document.body.classList.remove('light', 'dark', 'neon', 'retro', 'watercolor');
+    // Add current theme class
+    document.body.classList.add(gameState.theme);
+  }, [gameState.theme]);
+
   // Reset confetti after animation
   useEffect(() => {
     if (showConfetti) {
@@ -54,7 +62,7 @@ const Game: React.FC = () => {
   const isGameActive = gameState.status === 'playing' && gameState.moveCount > 0;
 
   return (
-    <div className="w-full max-w-md mx-auto p-4 theme-transition">
+    <div className={`w-full max-w-md mx-auto p-4 theme-transition`}>
       <GameStatus 
         status={gameState.status}
         winner={gameState.winner}
