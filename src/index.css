@@ -64,6 +64,15 @@
     --button-text: 210 40% 98%;
     --button-hover: 222 47% 20%;
     --control-bg: 210 40% 96%;
+
+    /* Retro Pixel Theme (Unlockable) */
+    --retro-background: 35 30% 90%; /* Soft, warm beige */
+    --retro-foreground: 35 80% 20%; /* Dark brown */
+    --retro-player-color: 30 90% 50%; /* Warm orange */
+    --retro-ai-color: 350 80% 40%; /* Muted brick red */
+    --retro-grid-border: 35 80% 20%; /* Dark brown border */
+    --retro-win-line: 50 90% 40%; /* Golden brown */
+    --retro-glow: 35 80% 20% / 0.3; /* Soft, warm glow */
   }
 
   /* Dark Theme */
@@ -194,6 +203,18 @@
     --watercolor-ai-color: 340 70% 60%;
     --watercolor-grid-border: 210 20% 80%;
     --watercolor-win-line: 130 50% 60%;
+  }
+
+  .retro {
+    /* Retro Theme Specific Styles */
+    --background: var(--retro-background);
+    --foreground: var(--retro-foreground);
+    --player-color: var(--retro-player-color);
+    --ai-color: var(--retro-ai-color);
+    --grid-border: var(--retro-grid-border);
+    --win-line: var(--retro-win-line);
+    --player-glow: var(--retro-glow);
+    --ai-glow: var(--retro-glow);
   }
 }
 
