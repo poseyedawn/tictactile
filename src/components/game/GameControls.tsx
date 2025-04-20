@@ -3,7 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Difficulty, Theme } from '@/types/game';
 import { cn } from '@/lib/utils';
-import { RefreshCw, Volume2, VolumeX, Sun, Moon, Zap, Lock } from 'lucide-react';
+import { RefreshCw, Volume2, VolumeX, Sun, Moon, Zap, Lock, Flame, Waves } from 'lucide-react';
 
 interface GameControlsProps {
   onNewGame: () => void;
@@ -34,7 +34,8 @@ const GameControls: React.FC<GameControlsProps> = ({
     ['dark', <Moon key="dark" className="w-5 h-5" />],
     ['neon', <Zap key="neon" className="w-5 h-5" />],
     ['retro', <span key="retro" className="text-xs">Retro</span>],
-    ['watercolor', <span key="water" className="text-xs">Water</span>]
+    ['watercolor', <Waves key="water" className="w-5 h-5" />],
+    ['fire', <Flame key="fire" className="w-5 h-5 text-[#fa6c17]" />]
   ];
   
   return (
