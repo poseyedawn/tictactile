@@ -1,115 +1,220 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* ... keep existing code (core themes and variables) the same ... */
+  /* Light Theme (Default) */
+  :root {
+    /* Base Colors */
+    --background: 210 40% 98%; /* Light blue-gray */
+    --foreground: 222 47% 11%;
 
-  /* WATER THEME ENHANCEMENT */
-  .watercolor {
-    /* Background: gradient reminiscent of ocean */
-    --background: 210 80% 92%; /* Light aqua-blue */
-    --foreground: 205 43% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --card: 200 60% 97%;
-    --card-foreground: 205 43% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --popover: 205 85% 98%;
-    --popover-foreground: 205 43% 14%;
+    --primary: 222 47% 11%;
+    --primary-foreground: 210 40% 98%;
 
-    --primary: 190 80% 45%;   /* Deep blue */
-    --primary-foreground: 210 80% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --secondary: 210 60% 96%;
-    --secondary-foreground: 205 43% 14%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --muted: 190 100% 95%;
-    --muted-foreground: 210 23% 45%;
-
-    --accent: 190 100% 90%;
-    --accent-foreground: 205 43% 14%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 47% 11%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 80% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 202 71% 82%;
-    --input: 202 71% 82%;
-    --ring: 200 49% 34%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
 
-    /* Game-specific for water */
-    --game-background: 200 82% 90%;
-    --player-color: 202 97% 43%;  /* Rich blue */
-    --ai-color: 174 62% 49%;      /* Turquoise/cyan */
-    --grid-border: 202 71% 82%;
-    --grid-hover: 203 63% 90%;
-    --win-line: 194 100% 38%;     /* Deep teal */
-    --draw-color: 190 80% 56%;
+    --radius: 0.5rem;
 
-    /* Glow effects - like light on water */
-    --player-glow: 202 97% 43% / 0.44;
-    --ai-glow: 174 62% 60% / 0.32;
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5% 26%;
+    --sidebar-primary: 240 6% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 5% 96%;
+    --sidebar-accent-foreground: 240 6% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217 91% 60%;
 
+    /* Game-specific theme variables */
+    --game-background: 210 40% 98%;
+    --player-color: 222 100% 60%;
+    --ai-color: 340 100% 60%;
+    --grid-border: 214 32% 91%;
+    --grid-hover: 210 40% 96%;
+    --win-line: 130 100% 60%;
+    --draw-color: 40 100% 60%;
+
+    /* Token glow colors */
+    --player-glow: 222 100% 60% / 0.4;
+    --ai-glow: 340 100% 60% / 0.4;
+    
     /* UI elements */
-    --button-bg: 194 100% 38%;
-    --button-text: 210 80% 98%;
-    --button-hover: 206 100% 46%;
-    --control-bg: 210 42% 99%;
-    background: linear-gradient(135deg, #8fd3f4 0%, #1d5fa7 100%);
-    /* Subtle moving gradient overlay for ocean look, see below */
+    --button-bg: 222 47% 11%;
+    --button-text: 210 40% 98%;
+    --button-hover: 222 47% 20%;
+    --control-bg: 210 40% 96%;
+
+    /* Retro Pixel Theme (Unlockable) */
+    --retro-background: 35 30% 90%; /* Soft, warm beige */
+    --retro-foreground: 35 80% 20%; /* Dark brown */
+    --retro-player-color: 30 90% 50%; /* Warm orange */
+    --retro-ai-color: 350 80% 40%; /* Muted brick red */
+    --retro-grid-border: 35 80% 20%; /* Dark brown border */
+    --retro-win-line: 50 90% 40%; /* Golden brown */
+    --retro-glow: 35 80% 20% / 0.3; /* Soft, warm glow */
   }
 
-  /* FIRE THEME */
-  .fire {
-    --background: 24 100% 98%;         /* Light orange background */
-    --foreground: 17 70% 20%;          /* Deep brown-red text */
+  /* Dark Theme */
+  .dark {
+    /* Base Colors */
+    --background: 222 47% 11%; /* Dark blue-gray */
+    --foreground: 210 40% 98%;
 
-    --card: 30 100% 96%;               /* Warm orange */
-    --card-foreground: 17 70% 20%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 24 100% 96%;
-    --popover-foreground: 17 70% 20%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 17 97% 56%;     /* Vivid orange-red */
-    --primary-foreground: 24 100% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 30 97% 73%;   /* Lighter orange */
-    --secondary-foreground: 17 79% 23%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 24 76% 89%;
-    --muted-foreground: 17 84% 37%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 24 81% 63%; 
-    --accent-foreground: 17 79% 27%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84% 50%;
-    --destructive-foreground: 24 100% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 23 83% 68%;
-    --input: 23 83% 68%;
-    --ring: 17 97% 56%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 213 27% 84%;
+    
+    /* Sidebar */
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+    
+    /* Game-specific theme variables */
+    --game-background: 222 47% 11%;
+    --player-color: 222 100% 65%;
+    --ai-color: 340 100% 65%;
+    --grid-border: 217 33% 25%;
+    --grid-hover: 217 33% 20%;
+    --win-line: 130 100% 65%;
+    --draw-color: 40 100% 65%;
 
-    /* Game-specific for fire */
-    --game-background: 24 100% 96%;
-    --player-color: 20 100% 49%;  /* Orange */
-    --ai-color: 0 100% 50%;       /* Red */
-    --grid-border: 18 84% 46%;    /* Deep/burnt orange border */
-    --grid-hover: 38 100% 88%;    /* Soft gold */
-    --win-line: 44 100% 47%;      /* Bright yellow flame */
-    --draw-color: 30 97% 63%;
-
-    /* Token glows */
-    --player-glow: 44 100% 47% / 0.46;
-    --ai-glow: 0 100% 50% / 0.36;
-
+    /* Token glow colors */
+    --player-glow: 222 100% 65% / 0.6;
+    --ai-glow: 340 100% 65% / 0.6;
+    
     /* UI elements */
-    --button-bg: 17 97% 56%;
-    --button-text: 24 100% 98%;
-    --button-hover: 23 100% 62%;
-    --control-bg: 30 100% 96%;
+    --button-bg: 210 40% 98%;
+    --button-text: 222 47% 11%;
+    --button-hover: 210 40% 90%;
+    --control-bg: 217 33% 17%;
+  }
 
-    background: linear-gradient(120deg, #fd9304 0%, #ff5e00 100%);
-    /* Animated shimmer effect below */
+  /* Neon Theme */
+  .neon {
+    /* Base Colors */
+    --background: 240 10% 4%; /* Almost black */
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 120 100% 50%; /* Bright green */
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 240 10% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 14%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 300 100% 50%; /* Bright pink */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 100% 50%; /* Bright red */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 14%;
+    --input: 240 10% 14%;
+    --ring: 240 5% 84%;
+    
+    /* Game-specific theme variables */
+    --game-background: 240 10% 4%;
+    --player-color: 120 100% 65%; /* Neon green */
+    --ai-color: 300 100% 65%; /* Neon pink */
+    --grid-border: 180 100% 50%; /* Cyan */
+    --grid-hover: 180 100% 30%;
+    --win-line: 60 100% 60%; /* Neon yellow */
+    --draw-color: 30 100% 60%; /* Neon orange */
+
+    /* Token glow colors */
+    --player-glow: 120 100% 65% / 0.8;
+    --ai-glow: 300 100% 65% / 0.8;
+    
+    /* UI elements */
+    --button-bg: 180 100% 50%;
+    --button-text: 240 10% 4%;
+    --button-hover: 180 100% 70%;
+    --control-bg: 240 10% 14%;
+  }
+  
+  /* Variables for unlockable themes (defined but not active until unlocked) */
+  :root {
+    /* Retro Pixel Theme (Unlockable) */
+    --retro-background: 35 30% 90%;
+    --retro-foreground: 35 80% 20%;
+    --retro-player-color: 200 100% 30%;
+    --retro-ai-color: 0 100% 40%;
+    --retro-grid-border: 35 80% 20%;
+    --retro-win-line: 130 90% 30%;
+    
+    /* Watercolor Theme (Unlockable) */
+    --watercolor-background: 210 30% 95%;
+    --watercolor-player-color: 200 70% 60%;
+    --watercolor-ai-color: 340 70% 60%;
+    --watercolor-grid-border: 210 20% 80%;
+    --watercolor-win-line: 130 50% 60%;
+  }
+
+  .retro {
+    /* Retro Theme Specific Styles */
+    --background: var(--retro-background);
+    --foreground: var(--retro-foreground);
+    --player-color: var(--retro-player-color);
+    --ai-color: var(--retro-ai-color);
+    --grid-border: var(--retro-grid-border);
+    --win-line: var(--retro-win-line);
+    --player-glow: var(--retro-glow);
+    --ai-glow: var(--retro-glow);
   }
 }
 
@@ -117,92 +222,85 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+  
+  /* Game-specific base styles */
+  .board-container {
+    max-width: 400px;
+    aspect-ratio: 1/1;
+  }
+  
+  .cell-content {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    aspect-ratio: 1/1;
+  }
+  
+  .win-animation {
+    animation: bounce-in 0.5s ease-out;
+  }
+  
+  .win-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  
   .theme-transition {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
   }
-
-  /* ... keep existing code (responsive board and cell styles) the same ... */
-
-  /* -- WATERCELLS: Ripple effect (boards + cells) -- */
-  .watercolor .board-container {
-    position: relative;
-    overflow: hidden;
-    background: linear-gradient(135deg, #a2eafc 0%, #368ad1 100%);
-    /* subtle water shimmer layered by pseudo element below */
+  
+  /* Token styles */
+  .token {
+    transition: transform 0.2s ease-in-out;
   }
-  .watercolor .board-container::before {
-    content: '';
-    pointer-events: none;
+  
+  .token-x {
+    @apply text-[hsl(var(--player-color))];
+  }
+  
+  .token-o {
+    @apply text-[hsl(var(--ai-color))];
+  }
+  
+  /* Glow effects */
+  .glow-x {
+    filter: drop-shadow(0 0 8px hsl(var(--player-glow)));
+  }
+  
+  .glow-o {
+    filter: drop-shadow(0 0 8px hsl(var(--ai-glow)));
+  }
+  
+  /* Thinking animation for AI */
+  .thinking {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  /* Confetti animation */
+  .confetti-container {
     position: absolute;
-    inset: 0;
-    z-index: 1;
-    background: repeating-radial-gradient(circle at 50% 40%, rgba(255,255,255,0.16) 0px, rgba(255,255,255,0.04) 40px, transparent 80px);
-    opacity: 0.45;
-    animation: water-bg-shimmer 6s infinite linear;
-  }
-  .watercolor .cell {
-    background: rgba(255,255,255,0.25);
-    position: relative;
-    overflow: hidden;
-    z-index: 2;
-  }
-  .watercolor .cell-content {
-    animation: ripple 1.5s infinite alternate cubic-bezier(0.62,0,0.4,1);
-    filter: drop-shadow(0 0 2px #0ea5e9);
-  }
-
-  /* Animated ripple for token/board/cells */
-  @keyframes ripple {
-    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(50,210,255,0.16);}
-    100% { transform: scale(1.03); box-shadow: 0 0 10px 5px rgba(82,200,255,0.13);}
-  }
-  @keyframes water-bg-shimmer {
-    0% { background-position: 0 0; }
-    100% { background-position: 100px 24px; }
-  }
-
-  /* -- FIRECELLS: Glow & shimmer effect -- */
-  .fire .board-container {
-    background: linear-gradient(120deg, #fd9304 0%, #ff5e00 100%);
-    position: relative;
-    overflow: hidden;
-  }
-  .fire .board-container::before {
-    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     pointer-events: none;
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle at 55% 20%,rgba(255,242,190,0.36) 0 200px, transparent 400px),
-                radial-gradient(circle at 80% 80%,rgba(255,120,0,0.10) 0 200px, transparent 600px);
-    z-index: 1;
-    animation: fire-glow-bg 5s linear infinite;
-  }
-  .fire .cell {
-    background: linear-gradient(135deg,rgba(255,184,79,0.25),rgba(255,105,25,0.14) 60%,transparent);
-    border: 2px solid hsl(var(--grid-border));
-    box-shadow: 0 1px 5px 0 rgba(255,128,38,0.17), 0 0px 0 0 #ffbb1c;
+    z-index: 10;
     overflow: hidden;
-    position: relative;
-    z-index: 2;
   }
-  .fire .cell-content {
-    animation: fire-shimmer 1.2s infinite alternate cubic-bezier(0.62,0,0.4,1);
-    filter: drop-shadow(0 0 4px #fde047);
+  
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
   }
-
-  /* Shimmer for fire cells */
-  @keyframes fire-shimmer {
-    0% { filter: drop-shadow(0 0 9px #ffbb1c); }
-    100% { filter: drop-shadow(0 0 16px #ff6600); }
-  }
-  @keyframes fire-glow-bg {
-    0% { opacity: 0.95; }
-    50% { opacity: 1; }
-    100% { opacity: 0.92; }
-  }
-  /* ... keep existing code (rest of board/grid/cell, other tokens, confetti, etc.) the same ... */
 }
-
