@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -266,30 +267,37 @@
 
   /* Add Fire Theme */
   .fire {
-    --background: 240 10% 4%; /* Override: pure black background */
-    --foreground: 20 68% 23%;
-    --player-color: 19 97% 54%;
-    --ai-color: 26 100% 60%;
-    --grid-border: 28 78% 62%;
-    --grid-hover: 26 100% 90%;
-    --win-line: 13 100% 56%;
-    --draw-color: 27 91% 85%;
+    /* Updated to make the entire app background black */
+    --game-background: 0 0% 0%; /* Pure black for the entire app background */
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 20 68% 93%; /* Light text for dark background */
+    --player-color: 19 97% 54%; /* Bright orange-red for X */
+    --ai-color: 26 100% 60%; /* Bright orange for O */
+    --grid-border: 28 78% 62%; /* Orange border */
+    --grid-hover: 26 100% 15%; /* Dark hover effect */
+    --win-line: 13 100% 56%; /* Bright red win line */
+    --draw-color: 27 91% 85%; /* Light orange draw color */
 
+    /* Card and control colors for dark background */
+    --card: 20 80% 10%; /* Very dark orange-brown */
+    --card-foreground: 20 68% 93%; /* Light text */
+    --control-bg: 20 70% 15%; /* Dark control background */
+
+    /* Token glow colors */
     --player-glow: 18 100% 70% / 0.58;
     --ai-glow: 26 100% 65% / 0.58;
 
+    /* UI elements */
     --button-bg: 18 80% 44%;
     --button-text: 32 100% 97%;
     --button-hover: 13 100% 40%;
-    --control-bg: 40 100% 98%;
   }
   .fire-bg {
-    background: #000 !important;
     position: relative;
     overflow: hidden;
   }
   .cell-fire {
-    background: linear-gradient(134deg, #ffd69a 70%, #ffdbb7 100%);
+    background: linear-gradient(134deg, #200a00 0%, #3a1500 100%);
     box-shadow: 0 0 0 2px #fe610188 inset, 0 8px 32px -12px #fe610177;
     border-color: #fe6101 !important;
   }
