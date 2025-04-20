@@ -1,0 +1,47 @@
+
+@layer base {
+  .neon {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 120 100% 50%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 240 10% 14%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 14%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 300 100% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 10% 14%;
+    --input: 240 10% 14%;
+    --ring: 240 5% 84%;
+
+    --game-background: 240 10% 4%;
+    --player-color: 120 100% 65%;
+    --ai-color: 300 100% 65%;
+    --grid-border: 180 100% 50%;
+    --grid-hover: 180 100% 30%;
+    --win-line: 60 100% 60%;
+    --draw-color: 30 100% 60%;
+
+    --player-glow: 120 100% 65% / 0.8;
+    --ai-glow: 300 100% 65% / 0.8;
+
+    --button-bg: 180 100% 50%;
+    --button-text: 240 10% 4%;
+    --button-hover: 180 100% 70%;
+    --control-bg: 240 10% 14%;
+  }
+}

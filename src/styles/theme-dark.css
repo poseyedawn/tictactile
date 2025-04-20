@@ -1,0 +1,56 @@
+
+@layer base {
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 11%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 213 27% 84%;
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 224 76% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 60%;
+
+    --game-background: 222 47% 11%;
+    --player-color: 222 100% 65%;
+    --ai-color: 340 100% 65%;
+    --grid-border: 217 33% 25%;
+    --grid-hover: 217 33% 20%;
+    --win-line: 130 100% 65%;
+    --draw-color: 40 100% 65%;
+
+    --player-glow: 222 100% 65% / 0.6;
+    --ai-glow: 340 100% 65% / 0.6;
+
+    --button-bg: 210 40% 98%;
+    --button-text: 222 47% 11%;
+    --button-hover: 210 40% 90%;
+    --control-bg: 217 33% 17%;
+  }
+}

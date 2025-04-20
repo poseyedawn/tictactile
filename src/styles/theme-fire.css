@@ -1,0 +1,41 @@
+
+@layer base {
+  .fire {
+    --game-background: 0 0% 0%;
+    --background: 0 0% 0%;
+    --foreground: 20 68% 93%;
+
+    --player-color: 19 97% 54%;
+    --ai-color: 26 100% 60%;
+    --grid-border: 28 78% 62%;
+    --grid-hover: 26 100% 15%;
+    --win-line: 13 100% 56%;
+    --draw-color: 27 91% 85%;
+
+    --card: 20 80% 10%;
+    --card-foreground: 20 68% 93%;
+    --control-bg: 20 70% 15%;
+
+    --player-glow: 18 100% 70% / 0.58;
+    --ai-glow: 26 100% 65% / 0.58;
+    --button-bg: 18 80% 44%;
+    --button-text: 32 100% 97%;
+    --button-hover: 13 100% 40%;
+  }
+  .fire-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  .cell-fire {
+    background: linear-gradient(134deg, #200a00 0%, #3a1500 100%);
+    box-shadow: 0 0 0 2px #fe610188 inset, 0 8px 32px -12px #fe610177;
+    border-color: #fe6101 !important;
+  }
+  .token-fire-x {
+    filter: drop-shadow(0 0 8px #dd6017bb);
+  }
+  .token-fire-o {
+    color: #fe6101 !important;
+    filter: drop-shadow(0 0 12px #ffd07b99);
+  }
+}

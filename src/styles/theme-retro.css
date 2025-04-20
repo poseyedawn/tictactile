@@ -1,0 +1,22 @@
+
+@layer base {
+  .retro {
+    --background: var(--retro-background);
+    --foreground: var(--retro-foreground);
+    --player-color: var(--retro-player-color);
+    --ai-color: var(--retro-ai-color);
+    --grid-border: var(--retro-grid-border);
+    --win-line: var(--retro-win-line);
+    --player-glow: var(--retro-glow);
+    --ai-glow: var(--retro-glow);
+  }
+  :root {
+    --retro-background: 35 30% 90%;
+    --retro-foreground: 35 80% 20%;
+    --retro-player-color: 30 90% 50%;
+    --retro-ai-color: 350 80% 40%;
+    --retro-grid-border: 35 80% 20%;
+    --retro-win-line: 50 90% 40%;
+    --retro-glow: 35 80% 20% / 0.3;
+  }
+}

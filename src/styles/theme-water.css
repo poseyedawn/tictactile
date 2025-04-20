@@ -1,0 +1,46 @@
+
+@layer base {
+  .water {
+    --background: 207 100% 94%;
+    --foreground: 222 94% 10%;
+    --player-color: 207 100% 52%;
+    --ai-color: 191 97% 69%;
+    --grid-border: 210 88% 80%;
+    --grid-hover: 208 100% 89%;
+    --win-line: 191 97% 37%;
+    --draw-color: 207 58% 74%;
+
+    --player-glow: 220 100% 61% / 0.5;
+    --ai-glow: 191 97% 62% / 0.5;
+
+    --button-bg: 207 89% 62%;
+    --button-text: 210 40% 98%;
+    --button-hover: 207 100% 43%;
+    --control-bg: 203 100% 96%;
+  }
+  .water-bg {
+    background: radial-gradient(circle at 60% 40%, #b6e6fc 0%, #8fd3f4 50%, #1976d2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cell-water {
+    background: rgba(232,246,255,0.96);
+    box-shadow: 0 0 0 2px #67b5de33 inset, 0 6px 24px -8px #6ed1fc44;
+    border-color: #67b5de !important;
+  }
+  .token-water-x,
+  .token-water-o {
+    stroke-width: 2.2 !important;
+    stroke: #1976d2 !important;
+  }
+  .token-water-x {
+    color: #1976d2;
+    filter: drop-shadow(0 0 4px #86cefa88);
+  }
+  .token-water-o {
+    filter: drop-shadow(0 0 4px #82e1f7cc);
+    stroke: #1976d2 !important;
+    stroke-width: 2.2 !important;
+  }
+}

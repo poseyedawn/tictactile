@@ -1,0 +1,85 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  .board-container {
+    max-width: 400px;
+    aspect-ratio: 1/1;
+  }
+
+  .cell-content {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .board-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    aspect-ratio: 1/1;
+  }
+
+  .win-animation {
+    animation: bounce-in 0.5s ease-out;
+  }
+
+  .win-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  .theme-transition {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .token {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .token-x {
+    @apply text-[hsl(var(--player-color))];
+  }
+
+  .token-o {
+    @apply text-[hsl(var(--ai-color))];
+  }
+
+  .glow-x {
+    filter: drop-shadow(0 0 8px hsl(var(--player-glow)));
+  }
+  .glow-o {
+    filter: drop-shadow(0 0 8px hsl(var(--ai-glow)));
+  }
+
+  .thinking {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  .confetti-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+  }
+
+  .confetti {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+  }
+}
