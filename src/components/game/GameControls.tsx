@@ -3,8 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Difficulty, Theme } from '@/types/game';
 import { cn } from '@/lib/utils';
-import { RefreshCw, Volume2, VolumeX, Sun, Moon, Zap, Lock, Flame, Droplet, Droplets } from 'lucide-react';
-// Note: Droplet = retro, Droplets = water, Flame = fire
+import { RefreshCw, Volume2, VolumeX, Sun, Moon, Zap, Lock, Flame, Droplet, Droplets, Gamepad } from 'lucide-react';
+// Note: Gamepad = retro, Droplets = water, Flame = fire
 
 interface GameControlsProps {
   onNewGame: () => void;
@@ -34,8 +34,8 @@ const GameControls: React.FC<GameControlsProps> = ({
     ['light', <Sun key="light" className="w-5 h-5" />],
     ['dark', <Moon key="dark" className="w-5 h-5" />],
     ['neon', <Zap key="neon" className="w-5 h-5" />],
-    ['retro', <Droplet key="retro" className="w-5 h-5" />], // Retro now has an icon
-    ['water', <Droplets key="water" className="w-5 h-5" />], // Water now uses droplets
+    ['retro', <Gamepad key="retro" className="w-5 h-5" />], // Retro now uses gamepad icon
+    ['water', <Droplets key="water" className="w-5 h-5" />], // Water uses droplets
     ['fire', <Flame key="fire" className="w-5 h-5" />]
   ];
   
