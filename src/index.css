@@ -266,7 +266,7 @@
 
   /* Add Fire Theme */
   .fire {
-    --background: 240 10% 4%; /* Override: pure black background */
+    --background: 240 10% 4%; /* Set main background to near-black */
     --foreground: 20 68% 23%;
     --player-color: 19 97% 54%;
     --ai-color: 26 100% 60%;
@@ -274,17 +274,20 @@
     --grid-hover: 26 100% 90%;
     --win-line: 13 100% 56%;
     --draw-color: 27 91% 85%;
-
     --player-glow: 18 100% 70% / 0.58;
     --ai-glow: 26 100% 65% / 0.58;
-
     --button-bg: 18 80% 44%;
     --button-text: 32 100% 97%;
     --button-hover: 13 100% 40%;
     --control-bg: 40 100% 98%;
   }
-  .fire-bg {
+  /* For body bg outside of game */
+  body.fire {
     background: #000 !important;
+  }
+  .fire-bg {
+    /* Restore fiery gradient INSIDE tiles/cards, not black */
+    background: radial-gradient(circle at 65% 60%, #ffd6ae 0%, #ffe7cd 50%, #fe6101 95%) !important;
     position: relative;
     overflow: hidden;
   }
