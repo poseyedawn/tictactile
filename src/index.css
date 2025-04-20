@@ -248,52 +248,31 @@
     box-shadow: 0 0 0 2px #67b5de33 inset, 0 6px 24px -8px #6ed1fc44;
     border-color: #67b5de !important;
   }
-  /* Ripple effect for water mode */
-  .cell-water.ripple::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    width: 84%;
-    left: 8%;
-    height: 84%;
-    top: 8%;
-    border-radius: 50%;
-    pointer-events: none;
-    background: radial-gradient(circle, #aee9f6 25%, #daeeff00 70%);
-    animation: water-ripple 1.7s linear infinite;
-    opacity: 0.6;
-  }
-  @keyframes water-ripple {
-    0% {
-      transform: scale(0.95);
-      opacity: 0.62;
-    }
-    70% {
-      transform: scale(1.06);
-      opacity: 0.52;
-    }
-    100% {
-      transform: scale(0.96);
-      opacity: 0.62;
-    }
+  .token-water-x,
+  .token-water-o {
+    stroke-width: 2.2 !important; /* Harmonize outlines */
+    stroke: #1976d2 !important;
   }
   .token-water-x {
     color: #1976d2;
     filter: drop-shadow(0 0 4px #86cefa88);
   }
   .token-water-o {
+    /* Keep pufferfish glow and add outline for match */
     filter: drop-shadow(0 0 4px #82e1f7cc);
+    stroke: #1976d2 !important;
+    stroke-width: 2.2 !important;
   }
 
   /* Add Fire Theme */
   .fire {
-    --background: 27 100% 97%; /* Warm parchment */
+    --background: 240 10% 4%; /* Override: pure black background */
     --foreground: 20 68% 23%;
-    --player-color: 19 97% 54%;  /* Firewood orange/red */
-    --ai-color: 26 100% 60%;    /* Flame orange/gold */
-    --grid-border: 28 78% 62%;  /* Burnt edge */
+    --player-color: 19 97% 54%;
+    --ai-color: 26 100% 60%;
+    --grid-border: 28 78% 62%;
     --grid-hover: 26 100% 90%;
-    --win-line: 13 100% 56%;    /* Bright orange */
+    --win-line: 13 100% 56%;
     --draw-color: 27 91% 85%;
 
     --player-glow: 18 100% 70% / 0.58;
@@ -305,7 +284,7 @@
     --control-bg: 40 100% 98%;
   }
   .fire-bg {
-    background: radial-gradient(circle at 65% 60%, #ffd6ae 0%, #ffe7cd 50%, #fe6101 95%);
+    background: #000 !important;
     position: relative;
     overflow: hidden;
   }

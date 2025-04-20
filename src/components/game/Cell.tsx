@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { Player } from '@/types/game';
 import { cn } from '@/lib/utils';
@@ -16,12 +15,13 @@ interface CellProps {
 // Pufferfish SVG (not in lucide, so let's inline one simple SVG)
 const Pufferfish = ({ className }: { className?: string }) => (
   <svg viewBox="0 0 32 32" className={className} fill="none">
-    <circle cx="16" cy="16" r="10" fill="#9fd7ff" stroke="#1976d2" strokeWidth="2"/>
-    <ellipse cx="12.5" cy="14" rx="1.5" ry="2" fill="#fff" />
-    <ellipse cx="19.5" cy="14" rx="1.5" ry="2" fill="#fff" />
-    <circle cx="12.5" cy="15" r=".75" fill="#333" />
-    <circle cx="19.5" cy="15" r=".75" fill="#333" />
-    <ellipse cx="16" cy="20" rx="4" ry="2" fill="#b3e1ff" />
+    {/* Harmonized outline: strokeWidth 2.2 */}
+    <circle cx="16" cy="16" r="10" fill="#9fd7ff" stroke="#1976d2" strokeWidth="2.2"/>
+    <ellipse cx="12.5" cy="14" rx="1.5" ry="2" fill="#fff" stroke="#1976d2" strokeWidth="2.2"/>
+    <ellipse cx="19.5" cy="14" rx="1.5" ry="2" fill="#fff" stroke="#1976d2" strokeWidth="2.2"/>
+    <circle cx="12.5" cy="15" r=".75" fill="#333" stroke="#1976d2" strokeWidth="1.35"/>
+    <circle cx="19.5" cy="15" r=".75" fill="#333" stroke="#1976d2" strokeWidth="1.35"/>
+    <ellipse cx="16" cy="20" rx="4" ry="2" fill="#b3e1ff" stroke="#1976d2" strokeWidth="1.2"/>
     <ellipse cx="16" cy="18.2" rx="1.5" ry=".7" fill="#1976d2" opacity="0.12"/>
   </svg>
 );
@@ -52,7 +52,7 @@ const Cell: React.FC<CellProps> = ({ value, onClick, index, disabled, isWinningC
   let displayIcon: React.ReactNode = null;
   if (theme === "water") {
     if (value === "X") {
-      displayIcon = <Fish className="w-full h-full token-water-x" strokeWidth={2.8} />;
+      displayIcon = <Fish className="w-full h-full token-water-x" strokeWidth={2.2} />;
     } else if (value === "O") {
       displayIcon = <Pufferfish className="w-full h-full token-water-o" />;
     }
@@ -70,10 +70,10 @@ const Cell: React.FC<CellProps> = ({ value, onClick, index, disabled, isWinningC
     }
   }
 
-  // Apply ripple effect in water mode
+  // For water mode, REMOVE .ripple class from cellClass so no pulse anim
   const cellClass =
     theme === "water"
-      ? "cell-water ripple"
+      ? "cell-water"
       : theme === "fire"
       ? "cell-fire"
       : "";
