@@ -29,7 +29,7 @@ const GameStatus: React.FC<GameStatusProps> = ({
         <div className="flex items-center justify-center space-x-2 animate-fade-in">
           <Award className="text-[hsl(var(--win-line))]" />
           <span className="font-bold">
-            {winner === 'X' ? 'You win!' : 'AI wins!'}
+            {winner === 'X' ? 'You win!' : 'TORUK wins!'}
           </span>
         </div>
       );
@@ -92,3 +92,4 @@ const GameStatus: React.FC<GameStatusProps> = ({
 };
 
 export default GameStatus;
+
