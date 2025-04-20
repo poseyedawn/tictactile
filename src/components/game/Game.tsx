@@ -21,7 +21,7 @@ const Game: React.FC = () => {
   // Apply theme to document body
   useEffect(() => {
     // Remove all theme classes first
-    document.body.classList.remove('light', 'dark', 'neon', 'retro', 'watercolor');
+    document.body.classList.remove('light', 'dark', 'neon', 'retro', 'water', 'fire');
     // Add current theme class
     document.body.classList.add(gameState.theme);
   }, [gameState.theme]);
@@ -79,6 +79,7 @@ const Game: React.FC = () => {
         onCellClick={handlePlayerMove}
         disabled={gameState.currentPlayer !== 'X' || gameState.status !== 'playing'}
         currentPlayer={gameState.currentPlayer}
+        theme={gameState.theme} // pass theme down
       />
       
       <GameControls

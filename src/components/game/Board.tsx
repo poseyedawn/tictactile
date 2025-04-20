@@ -1,7 +1,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import Cell from './Cell';
-import { Board as BoardType, WinLine, Player } from '@/types/game';
+import { Board as BoardType, WinLine, Player, Theme } from '@/types/game';
 import { calculateWinLineCoordinates } from '@/utils/gameUtils';
 import { cn } from '@/lib/utils';
 
@@ -11,6 +11,7 @@ interface BoardProps {
   onCellClick: (index: number) => void;
   disabled: boolean;
   currentPlayer: Player;
+  theme?: Theme; // Added theme so we can pass to cell
 }
 
 const Board: React.FC<BoardProps> = ({
@@ -18,7 +19,8 @@ const Board: React.FC<BoardProps> = ({
   winLine,
   onCellClick,
   disabled,
-  currentPlayer
+  currentPlayer,
+  theme
 }) => {
   const boardRef = useRef<HTMLDivElement>(null);
   const [dimensions, setDimensions] = useState({ width: 0, height: 0, cellSize: 0 });
@@ -52,7 +54,11 @@ const Board: React.FC<BoardProps> = ({
   
   return (
     <div 
-      className="board-container w-full theme-transition mx-auto relative" 
+      className={cn(
+        "board-container w-full theme-transition mx-auto relative",
+        theme === "water" ? "water-bg" : "",
+        theme === "fire" ? "fire-bg" : ""
+      )} 
       ref={boardRef}
     >
       <div className="board-grid">
@@ -68,6 +74,7 @@ const Board: React.FC<BoardProps> = ({
                index === winLine.end || 
                index === Math.floor((winLine.start + winLine.end) / 2))
             }
+            theme={theme}
           />
         ))}
       </div>

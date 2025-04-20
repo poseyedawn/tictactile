@@ -5,7 +5,7 @@ export type Player = 'X' | 'O' | null;
 export type Board = (Player)[];
 export type GameStatus = 'playing' | 'won' | 'draw';
 export type Difficulty = 'easy' | 'medium' | 'hard' | 'optimus';
-export type Theme = 'light' | 'dark' | 'neon' | 'retro' | 'watercolor';
+export type Theme = 'light' | 'dark' | 'neon' | 'retro' | 'water' | 'fire';
 export type WinLine = {
   start: number;
   end: number;

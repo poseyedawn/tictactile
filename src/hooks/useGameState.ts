@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { GameState, Difficulty, Theme, Player } from '@/types/game';
 import { checkWinner, checkDraw, getAIMove, saveGameState, loadGameState } from '@/utils/gameUtils';
@@ -62,13 +61,17 @@ export const useGameState = () => {
     const { winStreak, availableThemes } = gameState;
 
     if (winStreak >= 3 && !availableThemes.includes('retro')) {
-      const updatedThemes = [...availableThemes, 'retro'] as Theme[];
+      const updatedThemes = [...availableThemes, 'retro'] as typeof availableThemes;
       setGameState(prev => ({ ...prev, availableThemes: updatedThemes }));
       sounds.playUnlock(gameState.soundEnabled);
     }
-
-    if (winStreak >= 5 && !availableThemes.includes('watercolor')) {
-      const updatedThemes = [...availableThemes, 'watercolor'] as Theme[];
+    if (winStreak >= 5 && !availableThemes.includes('water')) {
+      const updatedThemes = [...availableThemes, 'water'] as typeof availableThemes;
+      setGameState(prev => ({ ...prev, availableThemes: updatedThemes }));
+      sounds.playUnlock(gameState.soundEnabled);
+    }
+    if (winStreak >= 8 && !availableThemes.includes('fire')) {
+      const updatedThemes = [...availableThemes, 'fire'] as typeof availableThemes;
       setGameState(prev => ({ ...prev, availableThemes: updatedThemes }));
       sounds.playUnlock(gameState.soundEnabled);
     }

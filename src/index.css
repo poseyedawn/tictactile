@@ -216,6 +216,111 @@
     --player-glow: var(--retro-glow);
     --ai-glow: var(--retro-glow);
   }
+
+  /* Add Water Theme */
+  .water {
+    --background: 207 100% 94%; /* Ocean sky blue */
+    --foreground: 222 94% 10%;
+    --player-color: 207 100% 52%; /* Deep blue */
+    --ai-color: 191 97% 69%; /* Aqua-green for O/pufferfish */
+    --grid-border: 210 88% 80%;
+    --grid-hover: 208 100% 89%;
+    --win-line: 191 97% 37%;
+    --draw-color: 207 58% 74%;
+
+    --player-glow: 220 100% 61% / 0.5;
+    --ai-glow: 191 97% 62% / 0.5;
+
+    --button-bg: 207 89% 62%;
+    --button-text: 210 40% 98%;
+    --button-hover: 207 100% 43%;
+    --control-bg: 203 100% 96%;
+  }
+  /* Water background with gentle ocean-blue gradient and noise */
+  .water-bg {
+    background: radial-gradient(circle at 60% 40%, #b6e6fc 0%, #8fd3f4 50%, #1976d2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cell-water {
+    background: rgba(232,246,255,0.96);
+    box-shadow: 0 0 0 2px #67b5de33 inset, 0 6px 24px -8px #6ed1fc44;
+    border-color: #67b5de !important;
+  }
+  /* Ripple effect for water mode */
+  .cell-water.ripple::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 84%;
+    left: 8%;
+    height: 84%;
+    top: 8%;
+    border-radius: 50%;
+    pointer-events: none;
+    background: radial-gradient(circle, #aee9f6 25%, #daeeff00 70%);
+    animation: water-ripple 1.7s linear infinite;
+    opacity: 0.6;
+  }
+  @keyframes water-ripple {
+    0% {
+      transform: scale(0.95);
+      opacity: 0.62;
+    }
+    70% {
+      transform: scale(1.06);
+      opacity: 0.52;
+    }
+    100% {
+      transform: scale(0.96);
+      opacity: 0.62;
+    }
+  }
+  .token-water-x {
+    color: #1976d2;
+    filter: drop-shadow(0 0 4px #86cefa88);
+  }
+  .token-water-o {
+    filter: drop-shadow(0 0 4px #82e1f7cc);
+  }
+
+  /* Add Fire Theme */
+  .fire {
+    --background: 27 100% 97%; /* Warm parchment */
+    --foreground: 20 68% 23%;
+    --player-color: 19 97% 54%;  /* Firewood orange/red */
+    --ai-color: 26 100% 60%;    /* Flame orange/gold */
+    --grid-border: 28 78% 62%;  /* Burnt edge */
+    --grid-hover: 26 100% 90%;
+    --win-line: 13 100% 56%;    /* Bright orange */
+    --draw-color: 27 91% 85%;
+
+    --player-glow: 18 100% 70% / 0.58;
+    --ai-glow: 26 100% 65% / 0.58;
+
+    --button-bg: 18 80% 44%;
+    --button-text: 32 100% 97%;
+    --button-hover: 13 100% 40%;
+    --control-bg: 40 100% 98%;
+  }
+  .fire-bg {
+    background: radial-gradient(circle at 65% 60%, #ffd6ae 0%, #ffe7cd 50%, #fe6101 95%);
+    position: relative;
+    overflow: hidden;
+  }
+  .cell-fire {
+    background: linear-gradient(134deg, #ffd69a 70%, #ffdbb7 100%);
+    box-shadow: 0 0 0 2px #fe610188 inset, 0 8px 32px -12px #fe610177;
+    border-color: #fe6101 !important;
+  }
+  .token-fire-x {
+    filter: drop-shadow(0 0 8px #dd6017bb);
+  }
+  .token-fire-o {
+    color: #fe6101 !important;
+    filter: drop-shadow(0 0 12px #ffd07b99);
+  }
 }
 
 @layer base {
