@@ -28,7 +28,7 @@ const GameControls: React.FC<GameControlsProps> = ({
   availableThemes,
   gameActive
 }) => {
-  const difficultyOptions: Difficulty[] = ['easy', 'medium', 'hard'];
+  const difficultyOptions: Difficulty[] = ['easy', 'medium', 'hard', 'optimus'];
   const themeOptions: [Theme, React.ReactNode][] = [
     ['light', <Sun key="light" className="w-5 h-5" />],
     ['dark', <Moon key="dark" className="w-5 h-5" />],
